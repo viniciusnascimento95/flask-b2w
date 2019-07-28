@@ -2,7 +2,6 @@ from mongoengine import (
     BooleanField,
     StringField,
 )
-
 # Apps
 
 from apps.planets.models import Planet
@@ -17,40 +16,90 @@ class TestPlanet:
         }
         # create instance object planet
         self.model = Planet(**self.data)
+    
+    # test field name
 
     def test_name_field_exists(self):
         """
-        Verifico se o campo name existe
+        Field Name Verification Exists
         """
         assert 'name' in self.model._fields
 
     def test_name_field_is_required(self):
         """
-        verifica se o campo nome é requirido
+        Field Name Verification is required
         """
         assert self.model._fields['name'].required is True
 
     def test_name_field_is_unique(self):
         """
-        Verifico se o campo email é unico
+        Field Name Verification is unique
         """
         assert self.model._fields['name'].required is True
 
     def test_name_field_is_str(self):
         """
-        Verifico se o campo email é do tipo string
+        Field Name Verification type is string
         """
         assert isinstance(self.model._fields['name'], StringField)
 
-    def test_active_field_exists(self):
-        assert 'active' in self.model._fields
+    # test field climate
+
+    def test_climate_field_exists(self):
+        """
+        Field Climate Verification Exists
+        """
+        assert 'climate' in self.model._fields
+
+    def test_climate_field_not_required(self):
+        """
+        Field climate Verification is required
+        """
+        assert self.model._fields['climate'].required is False
+
+    def test_climate_field_not_unique(self):
+        """
+        Field climate Verification is unique
+        """
+        assert self.model._fields['climate'].required is False
+
+    def test_climate_field_is_str(self):
+        """
+        Field climate Verification type is string
+        """
+        assert isinstance(self.model._fields['climate'], StringField)
+
+    # teste field terrain
+    def test_terrain_field_exists(self):
+        """
+        Field terrain Verification Exists
+        """
+        assert 'terrain' in self.model._fields
+
+    def test_terrain_field_not_required(self):
+        """
+        Field terrain Verification is required
+        """
+        assert self.model._fields['terrain'].required is False
+
+    def test_terrain_field_not_unique(self):
+        """
+        Field terrain Verification is unique
+        """
+        assert self.model._fields['terrain'].required is False
+
+    def test_terrain_field_is_str(self):
+        """
+        Field terrain Verification type is string
+        """
+        assert isinstance(self.model._fields['terrain'], StringField)
 
     def test_all_fields_in_model(self):
         """
-        Verifico se todos os campos estão de fato no meu modelo
+        I check if all fields are actually in my model
         """
         fields = [
-            'name', 'climate', 'terrain', 'created_at',  'updated_at'
+            'name', 'climate', 'terrain', 'created_at'
         ]
 
         model_keys = [i for i in self.model._fields.keys()]
@@ -59,5 +108,3 @@ class TestPlanet:
         model_keys.sort()
 
         assert fields == model_keys
-
-# https://lucassimon.com.br/2018/10/serie-api-em-flask---parte-6---criando-e-testando-nosso-modelo-de-usuarios/
