@@ -11,7 +11,7 @@ from apps.messages import MSG_INVALID_DATA, MSG_RESOURCE_CREATED, MSG_RESOURCE_F
 
 from .models import Planet
 from .schemas import PlanetRegistrationSchema, PlanetSchema, PlanetUpdateSchema
-from .utils import get_planet_by_id
+from .utils import get_planet_by_id, get_planet_by_name
 
 
 class PlanetsResource(Resource):
@@ -158,3 +158,18 @@ class PlanetsFindId(Resource):
             return resp_exception('Planets', description=e.__str__())
 
         return resp_ok('Planets', MSG_RESOURCE_DELETED.format('Planet'))
+
+
+class PlanetsFindName(Resource):
+
+    def get(self, planet_name):
+        result = None
+        schema = PlanetSchema()
+
+        planet = get_planet_by_name(planet_name)
+
+        result = schema.dump(planet)
+
+        return resp_ok(
+            'Planets', MSG_RESOURCE_FETCHED.format('Planets'),  data=result.data
+        )
