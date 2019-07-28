@@ -17,12 +17,9 @@ api = Api()
 
 def configure_api(app):
 
-    # adicionamos na rota '/' a sua classe correspondente Index
-
     api.add_resource(Index, '/')
     api.add_resource(PlanetsResource, '/planets')
     api.add_resource(PlanetsFindId, '/planets/<string:planet_id>')
     api.add_resource(PlanetsFindName, '/planets/name/<string:planet_name>')
 
-    # inicializamos a api com as configurações do flask vinda por parâmetro
     api.init_app(app)

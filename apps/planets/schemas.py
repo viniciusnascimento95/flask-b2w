@@ -23,7 +23,7 @@ class PlanetRegistrationSchema(Schema):
 
 class PlanetSchema(Schema):
     id = Str()
-    name = Str(required=True, error_messages={"required": MSG_FIELD_REQUIRED})
+    name = Str()
     climate = Str()
     terrain = Str()
     films = fields.Str(dump_only=True)

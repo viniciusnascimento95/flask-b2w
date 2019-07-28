@@ -27,6 +27,9 @@ class Mixin(db.Document):
 
 
 class Planet(Mixin):
+    """
+    Implementation Model for Planet
+    """
     meta = {'collection': 'planets'}
 
     name = StringField(max_length=200, unique=True, required=True)

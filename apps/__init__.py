@@ -10,10 +10,10 @@ def create_app(config_name):
 
     app.config.from_object(config[config_name])
 
-    # Configure MongoEngine
+    # configuration MongoEngine
     db.init_app(app)
 
-    # executa a chamada da função de configuração
+    # function configuration app
     configure_api(app)
 
     return app

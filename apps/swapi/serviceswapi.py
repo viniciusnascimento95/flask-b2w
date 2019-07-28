@@ -6,6 +6,9 @@ SWAPI_PLANETS_URL = "%s/planets/" % SWAPI_URL
 
 
 class Swapi:
+    """
+    This class is for searching the planets in our database.
+    """
 
     @classmethod
     def search_planet_by_name(cls, name):
