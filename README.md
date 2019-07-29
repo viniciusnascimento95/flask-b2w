@@ -1,5 +1,6 @@
 # API B2W 
-### Tools used
+###
+## Tools used
 * __python-dotenv__
 * __flask__
 * __Flask restfull__
@@ -25,7 +26,9 @@
 
 Flask-B2W is a Restful API, a CRUD of planets was implemented using MongoDB database, this challenge for the backend developer position on B2W DIGITAL.
 
-### Requirements to use
+## Example
+
+### Requirements to use for test local
 
 * [Python 3.6](https://www.python.org/)
 * [Pip](https://pypi.org/project/pip/)
@@ -46,11 +49,15 @@ Flask-B2W is a Restful API, a CRUD of planets was implemented using MongoDB data
 3. Open file in directory flask-b2w/docs/API-B2W.postman_collection.json
 4. Do the operations according to the documentation
 
-#### Model using for this project
+#### Entity this project
 
+ - id
  - name 
  - climate
  - terrain
+ - films
+ - films_appearances
+ - created_at
 
 ### Planets Actions
 
@@ -63,3 +70,9 @@ Flask-B2W is a Restful API, a CRUD of planets was implemented using MongoDB data
 |`/planets/<string:planet_id>`|`DELETE`|204|Delete a planet|
 |`/planets/name/<string:planet_name>`|`GET`|200|Get a planet by name|
 
+
+### Run tests local
+
+```shell
+make test
+```
