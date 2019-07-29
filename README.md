@@ -56,9 +56,9 @@ Flask-B2W is a Restful API, a CRUD of planets was implemented using MongoDB data
 
 |Path|Method|Status Code|Description|
 |:---|:----:|:---------:|:----------|
-|`/api/planets/`|`OPTIONS`|200|Shows Planets Resource structure|
-|`/api/planets/`|`GET`|200|List all planets|
-|`/api/planets/:id`|`GET`|200|Get a planet object|
-|`/api/planets/`|`POST`|201|Create a planet|
-|`/api/planets/:id`|`PUT`|200|Update all fields on a planet object|
-|`/api/planets/:id`|`DELETE`|204|Delete a planet|
+|`/planets`|`GET`|200|List all planets|
+|`/planets/<string:planet_id>`|`GET`|200|Get a planet by id|
+|`/planets`|`POST`|201|Create a planet|
+|`/planets/<string:planet_id>`|`PUT`|200|Update all fields|
+|`/planets/<string:planet_id>`|`DELETE`|204|Delete a planet|
+|`/planets/<string:planet_name>`|`GET`|200|Get a planet by name|
