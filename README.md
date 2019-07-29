@@ -54,21 +54,25 @@ Flask-B2W is a Restful API, a CRUD of planets was implemented using MongoDB data
 
 ![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/1_listplanet.png)
 
+#### Search planet by ID
+
+![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/3_getplanetbyid.png)
+
 #### Create planet
 
-![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/1_listplanet.png)
+![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/2_createplanet.png)
 
 #### Put planet
 
-![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/1_listplanet.png)
+![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/4_updateplanet.png)
 
 #### Delete planet
 
-![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/1_listplanet.png)
+![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/5_deleteplanet.png)
 
 #### Search by name
 
-![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/1_listplanet.png) 
+![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/6_searchplanetbyname.png) 
 
 #### Entity this project
 
@@ -80,7 +84,7 @@ Flask-B2W is a Restful API, a CRUD of planets was implemented using MongoDB data
  - films_appearances
  - created_at
 
-### Planets Actions
+### Endpoints Actions
 
 |Path|Method|Status Code|Description|
 |:---|:----:|:---------:|:----------|
