@@ -39,8 +39,7 @@ Flask-B2W is a Restful API, a CRUD of planets was implemented using MongoDB data
 1. enter in directory flask-b2w
 2. run the command pip install pipenv
 3. run the command pipenv install
-4. run the command python application.py
-5. use Postman for request client
+4. run the command python application.py or make run
 
 ### Postman
 
@@ -48,6 +47,28 @@ Flask-B2W is a Restful API, a CRUD of planets was implemented using MongoDB data
 2. Go to file tab and click import or Ctrl+O
 3. Open file in directory flask-b2w/docs/API-B2W.postman_collection.json
 4. Do the operations according to the documentation
+
+### Using Postman for request client
+
+#### List planets
+
+![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/1_listplanet.png)
+
+#### Create planet
+
+![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/1_listplanet.png)
+
+#### Put planet
+
+![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/1_listplanet.png)
+
+#### Delete planet
+
+![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/1_listplanet.png)
+
+#### Search by name
+
+![](https://github.com/viniciusnascimento95/flask-b2w/blob/master/docs/img/1_listplanet.png) 
 
 #### Entity this project
 
